@@ -18,9 +18,9 @@ BOT_NAME = os.getenv("BOT_NAME", "˹Meow x Robot˼ ♡")
 
 # ---- /start buttons (OWNER / UPDATES / SUPPORT / SOURCE) ----
 OWNER_URL = os.getenv("OWNER_URL", "https://t.me/telegram")
-UPDATE_CHANNEL_URL = os.getenv("UPDATE_CHANNEL_URL", "https://t.me/telegram")
-SUPPORT_URL = os.getenv("SUPPORT_URL", os.getenv("UPDATE_GROUP_URL", "https://t.me/telegram"))
-SOURCE_URL = os.getenv("SOURCE_URL", "https://github.com")
+UPDATE_CHANNEL_URL = os.getenv("UPDATE_CHANNEL_URL", "https://t.me/kirti_bots_support")
+SUPPORT_URL = os.getenv("SUPPORT_URL", os.getenv("UPDATE_GROUP_URL", "https://t.me/kirti_bots"))
+SOURCE_URL = os.getenv("SOURCE_URL", "https://github.com/TEAM-KRITI/pro")
 
 # ---- behaviour tuning ----
 WARN_DELETE_AFTER = int(os.getenv("WARN_DELETE_AFTER", "5"))     # seconds before warning msg disappears
