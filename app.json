@@ -1,0 +1,18 @@
+{
+  "name": "Meow Guard Bot",
+  "description": "Telegram group security bot (anti link / promo / phone / hashtag / forward / stylish text / abuse ...)",
+  "stack": "heroku-24",
+  "env": {
+    "BOT_TOKEN": {"description": "Token from @BotFather"},
+    "MONGO_URI": {"description": "MongoDB connection string (free Atlas cluster)", "required": false},
+    "OWNER_ID": {"description": "Your Telegram user id (for /setimage)", "required": false},
+    "START_IMAGE": {"description": "Image URL for /start (optional)", "required": false},
+    "FONT_STYLE": {"description": "smallcaps or off", "required": false},
+    "BOT_NAME": {"description": "Bot name shown in /start text", "required": false},
+    "OWNER_URL": {"description": "OWNER button link", "required": false},
+    "UPDATE_CHANNEL_URL": {"description": "UPDATES button link", "required": false},
+    "SUPPORT_URL": {"description": "SUPPORT button link", "required": false},
+    "SOURCE_URL": {"description": "SOURCE button link", "required": false}
+  },
+  "formation": {"worker": {"quantity": 1, "size": "basic"}}
+}
