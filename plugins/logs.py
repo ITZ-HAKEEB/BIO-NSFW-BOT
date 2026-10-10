@@ -3,18 +3,19 @@
 Events: bot started / stopped, bot added to / removed from a chat, new user started the bot.
 Does nothing if LOG_GROUP_ID is not set.
 """
-import asyncio, html
+import html, pkgutil, platform
 from datetime import datetime, timezone
 
-from telegram import LinkPreviewOptions
+import telegram
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, LinkPreviewOptions
 from telegram.constants import ParseMode
 from telegram.error import TelegramError
 from telegram.ext import ChatMemberHandler
 
 import config
-from database import db
-from fonts import style
-from helpers import log
+import plugins
+from fonts import btn_style, style
+from helpers import get_image, log
 
 NAME = "logs"
 _IN = ("member", "administrator", "creator", "restricted")
@@ -29,13 +30,20 @@ def _user_link(user):
     return f'<a href="tg://user?id={user.id}">{html.escape(user.full_name)}</a>'
 
 
-async def send_log(bot, text):
-    """Send an HTML message to the log group. Never raises; returns True if sent."""
+async def send_log(bot, text, photo=None, markup=None):
+    """Send an HTML message (optionally with photo + buttons) to the log group. Never raises."""
     if not config.LOG_GROUP_ID:
         return False
     try:
+        if photo:
+            try:
+                await bot.send_photo(config.LOG_GROUP_ID, photo, caption=text, parse_mode=ParseMode.HTML,
+                                     reply_markup=markup)
+                return True
+            except TelegramError as e:   # bad photo url / file_id -> still send the text
+                log.warning("Logger: photo failed, sending text only: %s", e)
         await bot.send_message(config.LOG_GROUP_ID, text, parse_mode=ParseMode.HTML,
-                               link_preview_options=_NO_PREVIEW)
+                               link_preview_options=_NO_PREVIEW, reply_markup=markup)
         return True
     except TelegramError as e:
         log.warning("Logger: message not sent to LOG_GROUP_ID=%s (%s). Bot ko log group me add karo "
@@ -45,17 +53,18 @@ async def send_log(bot, text):
 
 
 async def started(bot):
-    mode = "MongoDB" if config.MONGO_URI else "local data.json"
-    users, groups = await asyncio.gather(asyncio.to_thread(db.count, "users"),
-                                         asyncio.to_thread(db.count, "groups"))
-    text = (f"🟢 <b>{style('Bot Started')}</b>\n\n"
-            f"{style('Bot')} : @{bot.username}\n"
-            f"{style('Name')} : {html.escape(config.BOT_NAME)}\n"
-            f"{style('Storage')} : {style(mode)}\n"
-            f"{style('Users')} : {users}\n"
-            f"{style('Groups')} : {groups}\n"
-            f"{style('Time')} : {_now()}")
-    if await send_log(bot, text):
+    plugins_loaded = sum(1 for _ in pkgutil.iter_modules(plugins.__path__))
+    text = (f"❖ <b>{style('BOT STARTED SUCCESSFULLY')}</b> ✅\n\n"
+            f"• <b>{style('BOT')}</b> :- {html.escape(config.BOT_NAME)}\n"
+            f"• <b>{style('PLUGINS')}</b> :- {plugins_loaded} {style('LOADED')}\n"
+            f"• <b>{style('PTB')}</b> :- <code>{telegram.__version__}</code>\n"
+            f"• <b>{style('PYTHON')}</b> :- <code>{platform.python_version()}</code>\n\n"
+            f"» <b>{style('POWERED BY')}</b> :- "
+            f'<a href="{html.escape(config.UPDATE_CHANNEL_URL)}">{style(html.escape(config.BOT_NAME))}</a>')
+    kb = InlineKeyboardMarkup([[InlineKeyboardButton(
+        btn_style("ADD ME IN YOUR GROUP"),
+        url=f"https://t.me/{bot.username}?startgroup=true&admin=delete_messages+restrict_members")]])
+    if await send_log(bot, text, photo=config.LOG_IMAGE or get_image(), markup=kb):
         log.info("Start message sent to log group")
 
 
