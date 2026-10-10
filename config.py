@@ -20,7 +20,7 @@ BOT_NAME = os.getenv("BOT_NAME", "˹ᴍᴇᴏᴡ x ʀᴏʙᴏᴛ˼ ♡")
 # ---- /sᴛᴀʀᴛ ʙᴜᴛᴛᴏɴs ----
 OWNER_URL = os.getenv(
     "OWNER_URL",
-    "https://System_xd_lll"
+    "https://t.me/System_xd_lll"
 )
 
 UPDATE_CHANNEL_URL = os.getenv(
