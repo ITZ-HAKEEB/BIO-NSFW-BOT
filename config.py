@@ -14,8 +14,8 @@ _lg = os.getenv("LOG_GROUP_ID", os.getenv("LOGGER_ID", "-1003979103138")).strip(
 LOG_GROUP_ID = int(_lg) if _lg.lstrip("-").isdigit() else 0
 
 # ---- font / photo ----
-FONT_STYLE = os.getenv("FONT_STYLE", "smallcaps")                # "smallcaps" or "off"
-OWNER_ID = int(os.getenv("OWNER_ID", "0") or 0)                  # your Telegram user id (for /setimage)
+FONT_STYLE = os.getenv("FONT_STYLE", "big")                # "smallcaps" or "off"
+OWNER_ID = int(os.getenv("OWNER_ID", "8957532324") or 0)                  # your Telegram user id (for /setimage)
 START_IMAGE = os.getenv("START_IMAGE", "https://anya-file-host.vercel.app/r4vffnlszc")                       # image URL or file_id (optional, /setimage overrides)
 
 # ---- bot identity ----
