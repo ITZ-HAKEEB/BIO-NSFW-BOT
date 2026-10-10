@@ -1,52 +1,111 @@
 """All settings live here. Values come from environment variables (Heroku Config Vars / .env)."""
+
 import os
 
-# ---- required ----
+# ---- ʀᴇǫᴜɪʀᴇᴅ ----
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 
-# ---- database (optional; without it a local data.json is used) ----
+# ---- ᴅᴀᴛᴀʙᴀsᴇ ----
 MONGO_URI = os.getenv("MONGO_URI", "")
 DB_NAME = os.getenv("DB_NAME", "meowguard")
 
-# ---- font / photo ----
-FONT_STYLE = os.getenv("FONT_STYLE", "smallcaps")                # "smallcaps" or "off"
-OWNER_ID = int(os.getenv("OWNER_ID", "0") or 0)                  # your Telegram user id (for /setimage)
-START_IMAGE = os.getenv("START_IMAGE", "")                       # image URL or file_id (optional, /setimage overrides)
+# ---- ғᴏɴᴛ / ᴘʜᴏᴛᴏ ----
+FONT_STYLE = os.getenv("FONT_STYLE", "smallcaps")
+OWNER_ID = int(os.getenv("OWNER_ID", "0") or 0)
+START_IMAGE = os.getenv("START_IMAGE", "")
 
-# ---- bot identity ----
-BOT_NAME = os.getenv("BOT_NAME", "˹Meow x Robot˼ ♡")
+# ---- ʙᴏᴛ ɪᴅᴇɴᴛɪᴛʏ ----
+BOT_NAME = os.getenv("BOT_NAME", "˹ᴍᴇᴏᴡ x ʀᴏʙᴏᴛ˼ ♡")
 
-# ---- /start buttons (OWNER / UPDATES / SUPPORT / SOURCE) ----
-OWNER_URL = os.getenv("OWNER_URL", "https://t.me/telegram")
-UPDATE_CHANNEL_URL = os.getenv("UPDATE_CHANNEL_URL", "https://t.me/kirti_bots_support")
-SUPPORT_URL = os.getenv("SUPPORT_URL", os.getenv("UPDATE_GROUP_URL", "https://t.me/kirti_bots"))
-SOURCE_URL = os.getenv("SOURCE_URL", "https://github.com/TEAM-KRITI/pro")
-
-# ---- behaviour tuning ----
-WARN_DELETE_AFTER = int(os.getenv("WARN_DELETE_AFTER", "5"))     # seconds before warning msg disappears
-ADMIN_CACHE_TTL = int(os.getenv("ADMIN_CACHE_TTL", "60"))        # seconds to cache admin check
-BIO_CACHE_TTL = int(os.getenv("BIO_CACHE_TTL", "600"))           # seconds to cache user bio
-FSUB_CACHE_TTL = int(os.getenv("FSUB_CACHE_TTL", "60"))          # seconds to cache "user joined channel"
-STYLISH_MIN_CHARS = int(os.getenv("STYLISH_MIN_CHARS", "3"))     # fancy chars needed to trigger nostylish
-DEFAULT_BAD_WORDS = [w for w in os.getenv("DEFAULT_BAD_WORDS", "fuck,bitch,bastard,slut,asshole").split(",") if w]
-
-# ---- texts ----
-START_GREETING = "🛡 Hello {name}! 👋"
-START_BODY = (
-    "I'm {bot_name}, your group's security bot keeping chats clean and safe.\n"
-    "⊙ What I can do :\n"
-    "➻ Block links, hashtags, phone numbers and promos\n"
-    "➻ Delete edited messages, forwards and stylish fonts\n"
-    "➻ Auto-delete messages and media after a set time\n"
-    "➻ Force subscribe, bio link filter and abuse filter\n"
-    "•——•••——————•—•——————•••——•\n\n"
-    "⚠️ Get started :\n"
-    "— Add me to your group\n"
-    "— Make me admin with delete messages permission\n"
-    "— Tap Help and commands to see every feature"
+# ---- /sᴛᴀʀᴛ ʙᴜᴛᴛᴏɴs ----
+OWNER_URL = os.getenv(
+    "OWNER_URL",
+    "https://System_xd_lll"
 )
+
+UPDATE_CHANNEL_URL = os.getenv(
+    "UPDATE_CHANNEL_URL",
+    "https://t.me/kirti_bots_support"
+)
+
+SUPPORT_URL = os.getenv(
+    "SUPPORT_URL",
+    os.getenv("UPDATE_GROUP_URL", "https://t.me/kirti_bots")
+)
+
+SOURCE_URL = os.getenv(
+    "SOURCE_URL",
+    "https://github.com/TEAM-KRITI/pro"
+)
+
+# ---- ʙᴇʜᴀᴠɪᴏᴜʀ sᴇᴛᴛɪɴɢs ----
+WARN_DELETE_AFTER = int(
+    os.getenv("WARN_DELETE_AFTER", "5")
+)
+
+ADMIN_CACHE_TTL = int(
+    os.getenv("ADMIN_CACHE_TTL", "60")
+)
+
+BIO_CACHE_TTL = int(
+    os.getenv("BIO_CACHE_TTL", "600")
+)
+
+FSUB_CACHE_TTL = int(
+    os.getenv("FSUB_CACHE_TTL", "60")
+)
+
+STYLISH_MIN_CHARS = int(
+    os.getenv("STYLISH_MIN_CHARS", "3")
+)
+
+DEFAULT_BAD_WORDS = [
+    word
+    for word in os.getenv(
+        "DEFAULT_BAD_WORDS",
+        "fuck,bitch,bastard,slut,asshole"
+    ).split(",")
+    if word
+]
+
+# ---- sᴛᴀʀᴛ ᴍᴇssᴀɢᴇ ----
+START_GREETING = "🛡 ʜᴇʟʟᴏ {name}! 👋"
+
+START_BODY = (
+    "ɪ'ᴍ {bot_name}, ʏᴏᴜʀ ɢʀᴏᴜᴘ's sᴇᴄᴜʀɪᴛʏ ʙᴏᴛ "
+    "ᴋᴇᴇᴘɪɴɢ ᴄʜᴀᴛs ᴄʟᴇᴀɴ ᴀɴᴅ sᴀғᴇ.\n\n"
+
+    "⊙ ᴡʜᴀᴛ ɪ ᴄᴀɴ ᴅᴏ :\n"
+    "➻ ʙʟᴏᴄᴋ ʟɪɴᴋs, ʜᴀsʜᴛᴀɢs, ᴘʜᴏɴᴇ ɴᴜᴍʙᴇʀs "
+    "ᴀɴᴅ ᴘʀᴏᴍᴏs\n"
+
+    "➻ ᴅᴇʟᴇᴛᴇ ᴇᴅɪᴛᴇᴅ ᴍᴇssᴀɢᴇs, ғᴏʀᴡᴀʀᴅs "
+    "ᴀɴᴅ sᴛʏʟɪsʜ ғᴏɴᴛs\n"
+
+    "➻ ᴀᴜᴛᴏ-ᴅᴇʟᴇᴛᴇ ᴍᴇssᴀɢᴇs ᴀɴᴅ ᴍᴇᴅɪᴀ "
+    "ᴀғᴛᴇʀ ᴀ sᴇᴛ ᴛɪᴍᴇ\n"
+
+    "➻ ғᴏʀᴄᴇ sᴜʙsᴄʀɪʙᴇ, ʙɪᴏ ʟɪɴᴋ ғɪʟᴛᴇʀ "
+    "ᴀɴᴅ ᴀʙᴜsᴇ ғɪʟᴛᴇʀ\n"
+
+    "•——•••——————•—•——————•••——•\n\n"
+
+    "⚠️ ɢᴇᴛ sᴛᴀʀᴛᴇᴅ :\n"
+    "— ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ\n"
+    "— ᴍᴀᴋᴇ ᴍᴇ ᴀɴ ᴀᴅᴍɪɴ ᴡɪᴛʜ ᴅᴇʟᴇᴛᴇ "
+    "ᴍᴇssᴀɢᴇs ᴘᴇʀᴍɪssɪᴏɴ\n"
+    "— ᴛᴀᴘ ʜᴇʟᴘ ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs ᴛᴏ sᴇᴇ "
+    "ᴇᴠᴇʀʏ ғᴇᴀᴛᴜʀᴇ"
+)
+
+# ---- ʜᴇʟᴘ ᴍᴇɴᴜ ----
 HELP_TEXT = (
-    "<u>⊙ BOT COMMAND HELP :</u>\n\n"
-    "<blockquote>🏵 Here you'll find details for all available plugins and features.</blockquote>\n\n"
-    "<blockquote>👇 Tap the buttons below to view help for each module :</blockquote>"
+    "<u>⊙ ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅ ʜᴇʟᴘ :</u>\n\n"
+
+    "<blockquote>🏵 ʜᴇʀᴇ ʏᴏᴜ'ʟʟ ғɪɴᴅ "
+    "ᴅᴇᴛᴀɪʟs ғᴏʀ ᴀʟʟ ᴀᴠᴀɪʟᴀʙʟᴇ "
+    "ᴘʟᴜɢɪɴs ᴀɴᴅ ғᴇᴀᴛᴜʀᴇs.</blockquote>\n\n"
+
+    "<blockquote>👇 ᴛᴀᴘ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ "
+    "ᴛᴏ ᴠɪᴇᴡ ʜᴇʟᴘ ғᴏʀ ᴇᴀᴄʜ ᴍᴏᴅᴜʟᴇ :</blockquote>"
 )
