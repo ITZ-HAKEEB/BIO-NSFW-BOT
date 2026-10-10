@@ -25,7 +25,7 @@ BOT_NAME = os.getenv("BOT_NAME", "˹kirti x Robot˼ ♡")
 OWNER_URL = os.getenv("OWNER_URL", "https://t.me/System_xd_lll")
 UPDATE_CHANNEL_URL = os.getenv("UPDATE_CHANNEL_URL", "https://t.me/kirti_bots")
 SUPPORT_URL = os.getenv("SUPPORT_URL", os.getenv("UPDATE_GROUP_URL", "https://t.me/kirti_bots_support"))
-SOURCE_URL = os.getenv("SOURCE_URL", "https://github.com")
+SOURCE_URL = os.getenv("SOURCE_URL", "https://github.com/TEAM-KRITI/pro")
 
 # ---- behaviour tuning ----
 WARN_DELETE_AFTER = int(os.getenv("WARN_DELETE_AFTER", "5"))     # seconds before warning msg disappears
