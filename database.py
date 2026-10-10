@@ -57,16 +57,19 @@ class Database:
         return self.ucol if kind == "users" else self.gcol
 
     def add(self, kind, _id):
+        """Save id. Returns True only if it was not saved before (new user / new group)."""
         if _id in self._seen[kind]:
-            return
+            return False
         self._seen[kind].add(_id)
         if self.col is not None:
-            self._col(kind).update_one({"_id": _id}, {"$setOnInsert": {"added": int(time.time())}}, upsert=True)
-        else:
-            lst = self.get(0).setdefault(kind, [])
-            if _id not in lst:
-                lst.append(_id)
-                self.save(0)
+            r = self._col(kind).update_one({"_id": _id}, {"$setOnInsert": {"added": int(time.time())}}, upsert=True)
+            return r.upserted_id is not None
+        lst = self.get(0).setdefault(kind, [])
+        if _id not in lst:
+            lst.append(_id)
+            self.save(0)
+            return True
+        return False
 
     def remove(self, kind, _id):
         self._seen[kind].discard(_id)
@@ -89,10 +92,10 @@ class Database:
         return len(self.get(0).setdefault(kind, []))
 
     def add_user(self, uid):
-        self.add("users", uid)
+        return self.add("users", uid)
 
     def add_group(self, cid):
-        self.add("groups", cid)
+        return self.add("groups", cid)
 
 
 db = Database()
