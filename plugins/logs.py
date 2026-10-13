@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 import telegram
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, LinkPreviewOptions
 from telegram.constants import ParseMode
-from telegram.error import TelegramError
+from telegram.error import ChatMigrated, TelegramError
 from telegram.ext import ChatMemberHandler, CommandHandler, filters
 
 import config
@@ -51,12 +51,16 @@ def _targets():
 
 def _hint(err):
     low = str(err).lower()
+    if isinstance(err, ChatMigrated) or "upgraded to a supergroup" in low or "migrated" in low:
+        return "Group supergroup ban gaya, uski ID badal gayi. Nayi ID LOG_GROUP_ID me daalo."
+    if "not enough rights" in low or "have no rights" in low or "need administrator" in low or "can't send" in low:
+        return "Bot ke paas yaha message bhejne ka right nahi hai. Channel ho to bot ko admin banao."
     if "chat not found" in low:
         return "Chat nahi mila: ID galat hai ya bot us group/channel me add nahi hai."
     if "forbidden" in low or "not a member" in low or "kicked" in low:
         return "Bot us group me nahi hai (ya kick/ban hai). Bot ko group me add karo."
-    if "not enough rights" in low or "administrator" in low:
-        return "Bot ke paas yaha message bhejne ka right nahi hai. Channel ho to bot ko admin banao."
+    if "thread" in low or "topic" in low:
+        return "Topics wala group hai: General topic open rakho ya bot ko topic ka access do."
     return "Telegram error."
 
 
@@ -66,7 +70,12 @@ async def send_log(bot, text, photo=None, markup=None):
     if not config.LOG_GROUP_ID:
         last_error = "LOG_GROUP_ID set nahi hai (ya galat format me hai). Sahi format: -1001234567890"
         return False
-    for target in _targets():
+    queue, tried = list(_targets()), []
+    while queue:
+        target = queue.pop(0)
+        if target in tried:
+            continue
+        tried.append(target)
         try:
             sent = False
             if photo:
@@ -74,14 +83,19 @@ async def send_log(bot, text, photo=None, markup=None):
                     await bot.send_photo(target, photo, caption=text, parse_mode=ParseMode.HTML, reply_markup=markup)
                     sent = True
                 except TelegramError as e:
-                    if "chat not found" in str(e).lower():
+                    if isinstance(e, ChatMigrated) or "chat not found" in str(e).lower():
                         raise
                     log.warning("Logger: photo failed, sending text only: %s", e)
             if not sent:
                 await bot.send_message(target, text, parse_mode=ParseMode.HTML,
                                        link_preview_options=_NO_PREVIEW, reply_markup=markup)
             _resolved, last_error = target, ""
+            if target != config.LOG_GROUP_ID:
+                log.warning("Logger works with chat id %s - set LOG_GROUP_ID=%s in Config Vars", target, target)
             return True
+        except ChatMigrated as e:              # group was upgraded to a supergroup -> use the new id
+            last_error = f"{e} -> {_hint(e)}"
+            queue.insert(0, e.new_chat_id)
         except TelegramError as e:
             last_error = f"{e} -> {_hint(e)}"
             if "chat not found" not in str(e).lower():
@@ -98,6 +112,10 @@ async def started(bot):
     try:
         if not config.LOG_GROUP_ID:
             log.info("Logger is OFF (LOG_GROUP_ID not set or invalid: %r)", config.LOG_GROUP_RAW)
+            if config.LOG_GROUP_RAW and config.OWNER_ID:   # value given but unusable -> don't stay silent
+                await bot.send_message(config.OWNER_ID, style("⚠️ Logger OFF hai: LOG_GROUP_ID galat format me hai.\n"
+                                       "Sahi format: -1001234567890\n\nAbhi value = ")
+                                       + html.escape(config.LOG_GROUP_RAW), parse_mode=ParseMode.HTML)
             return
         ok = await send_log(bot, start_text(bot), photo=config.LOG_IMAGE or get_image(), markup=start_kb(bot))
         if ok:
