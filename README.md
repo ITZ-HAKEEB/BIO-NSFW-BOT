@@ -1,59 +1,67 @@
-# Meow Guard Bot
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TEAM-KRITI/yariroad)
 
-Telegram group security bot, one file per module.
+# 🛡️ BioLinkRemover Bot
 
-```
-bot.py            entry point
-config.py         ALL settings (env vars, texts, tuning)
-database.py       MongoDB / local JSON storage
-helpers.py        admin check, warn, delete-later, toggle helpers
-plugins/
-  approve.py     fsub.py                                    (approve users / force subscribe)
-  nohashtags.py  nopromo.py  nophone.py  noforward.py  nostylish.py
-  biomode.py     linkfilter.py  abuse.py  edit.py          (filters)
-  mediadelete.py msgdelete.py                               (timers)
-  echo.py  purge.py  settings.py  start.py                  (commands/UI)
-  broadcast.py     owner-only /broadcast and /stats
-  guard.py         runs every enabled filter on each message
-  __init__.py      plugin registry
-```
+BioLinkRemover is a powerful, production-ready Telegram group security and auto-moderation bot. It automatically scans the biography/about sections of users sending messages in your group. If a user's bio contains spam links, blacklisted domains, or dirty words, the bot deletes their message and applies a configurable punishment (mute, kick, or ban).
 
-## Add a new filter
-Create `plugins/myfilter.py` with `NAME`, `HELP` and `async def check(context, msg, user, text, etypes)`
-(return a reason string to delete, else None), then add it to `FILTERS` in `plugins/__init__.py`.
+---
 
-## Config (Heroku Config Vars)
-`BOT_TOKEN` (required), `MONGO_URI` (recommended), `BOT_NAME`, `OWNER_URL`, `UPDATE_CHANNEL_URL`, `SUPPORT_URL`, `SOURCE_URL`, `FSUB_CACHE_TTL`,
-`WARN_DELETE_AFTER`, `ADMIN_CACHE_TTL`, `BIO_CACHE_TTL`, `STYLISH_MIN_CHARS`, `DEFAULT_BAD_WORDS`.
+## ✨ Features
 
-## Deploy on Heroku
-1. Push repo to GitHub -> Heroku New App -> Deploy -> connect repo.
-2. Settings -> Config Vars -> add `BOT_TOKEN` and `MONGO_URI`.
-3. Deploy Branch, then Resources -> turn ON `worker` (turn `web` off).
-CLI: `heroku config:set BOT_TOKEN=xxx MONGO_URI=xxx && git push heroku main && heroku ps:scale worker=1`
+- Automated Bio Scanner: Scans user profiles using Telegram's raw API (GetFullUser) upon sending messages.
+- Link & Keyword Blocker: Checks bios against a robust URL pattern regex and custom lists of dirty words/spam links.
+- Interactive Moderation Cards:
+  - Mute Mode: Warning cards include a 🔄 Refresh (Check Bio Again) button. Muted users can clean their bio and click this button to self-unmute without needing administrator help.
+  - Ban Mode: Warning cards include an 🔓 Unban User button so group administrators can lift bans instantly.
+- Group Whitelisting: Admins can approve specific users to bypass all bio scans.
+- Dynamic Configuration: Easily set punishment types (mute, kick, ban) via commands or an inline interactive settings panel.
+- Silent Database Registration: Automatically caches and stores user and group data into MongoDB on first contact.
+- Broadcast System: Owner-only commands to broadcast text or forward media to all registered groups and users.
+- High Performance Caching: Utilizes in-memory sets and TTL caches for whitelists, configs, and admin lists to prevent rate limits and API FloodWaits.
 
-## Use
-Add bot to group as admin (Delete messages). Admin commands: `/linkfilter on`, `/nopromo on`, `/abuse on`,
-`/addabuse word`, `/mediadelete 30`, `/msgdelete 60`, `/approve` (reply), `/unapprove`, `/approved`, `/fsub @channel`, `/echo text`, `/purge` (reply), `/settings`.
-Admins are never filtered.
+---
 
-## Font & photo
-- Every bot text uses the small-caps font (`fonts.py`). Set `FONT_STYLE=off` to disable.
-- Photo on /start and help: set `OWNER_ID` (your Telegram id), then in the bot's PM send a photo with caption
-  `/setimage` (or reply to a photo with `/setimage`). `/delimage` removes it. Or set `START_IMAGE` (URL/file_id).
+## 🚀 Setup & VPS Deployment Guide
 
-## MongoDB (so users, groups & settings survive Heroku restarts)
-1. mongodb.com/atlas -> free M0 cluster -> Database Access: create a user + password.
-2. Network Access -> Add IP `0.0.0.0/0` (Heroku IPs change).
-3. Connect -> Drivers -> copy the `mongodb+srv://...` string, put your password in it
-   (special characters must be URL-encoded) and set it as `MONGO_URI` in Heroku Config Vars.
-Collections created automatically in DB `meowguard`: `chats` (settings), `users`, `groups`.
-If `MONGO_URI` is wrong the bot stops at startup with a clear error. Without it, data.json is used (lost on Heroku restart).
+### Prerequisites
+- Python 3.10+
+- MongoDB Database: Get a free Atlas connection string at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas).
+- Telegram Credentials: Get your API_ID and API_HASH at [my.telegram.org](https://my.telegram.org/), and a BOT_TOKEN from [@BotFather](https://t.me/BotFather).
 
-## Broadcast (owner only, in the bot's PM; needs `OWNER_ID`)
-- Reply to any message with `/broadcast` -> copied to everyone (photos/buttons/format kept, no forward tag).
-- `/broadcast your text` -> plain text.
-- Flags: `-users`, `-groups`, `-pin` (pin in groups). Default = users + groups.
-- `/stats` shows how many users and groups are saved.
-Users are saved when they `/start` the bot, groups when the bot is added or sees a message.
-Blocked users / groups that removed the bot are cleaned from the list automatically.
+### VPS Setup (Linux Ubuntu/Debian)
+1. Upload the project folder to your VPS.
+2. Navigate to the project directory and run the automatic setup script:
+  
+   chmod +x setup.sh
+   ./setup.sh
+   
+3. The setup script will:
+   - Install required system packages (python3-venv, git, etc.).
+   - Set up a Python virtual environment and install requirements.
+   - Interactively ask you to fill in your .env configuration (it will read and pre-fill existing values if available).
+   - Ask if you want to install and launch the bot as a systemd service (biolink.service) for 24/7 background running.
+
+### Manual Running
+If you choose to run the bot manually:
+# Activate virtual environment
+source venv/bin/activate
+
+# Start the bot
+python main.py
+### Managing the Service
+If you configured the systemd service:
+- Check Bot Status: sudo systemctl status biolink
+- View Live Logs: sudo journalctl -u biolink -f
+- Restart Bot: sudo systemctl restart biolink
+- Stop Bot: sudo systemctl stop biolink
+
+---
+
+## 💳 Credits & License
+
+Made with ❤️ by:
+- Archon: [@TheArchon](https://github.com/TheArchon)
+- Telegram: [@ArchonNetwork](https://t.me/ArchonNetwork)
+- Ayush: [@mightyayush](https://github.com/mightyayush)
+
+*This code was published by @TeamArchon*
