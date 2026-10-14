@@ -36,15 +36,15 @@ LOG_IMAGE = os.getenv("LOG_IMAGE", "")
 # ---- font / photo ----
 FONT_STYLE = os.getenv("FONT_STYLE", "smallcaps")                # "smallcaps" or "off"
 OWNER_ID = int(os.getenv("OWNER_ID", "0") or 0)                  # your Telegram user id (for /setimage)
-START_IMAGE = os.getenv("START_IMAGE", "")                       # image URL or file_id (optional, /setimage overrides)
+START_IMAGE = os.getenv("START_IMAGE", "https://anya-file-host.vercel.app/eoj312jeuz")                       # image URL or file_id (optional, /setimage overrides)
 
 # ---- bot identity ----
-BOT_NAME = os.getenv("BOT_NAME", "˹Meow x Robot˼ ♡")
+BOT_NAME = os.getenv("BOT_NAME", "˹kirti x Robot˼ ♡")
 
 # ---- /start buttons (OWNER / UPDATES / SUPPORT / SOURCE) ----
 OWNER_URL = os.getenv("OWNER_URL", "https://t.me/telegram")
-UPDATE_CHANNEL_URL = os.getenv("UPDATE_CHANNEL_URL", "https://t.me/telegram")
-SUPPORT_URL = os.getenv("SUPPORT_URL", os.getenv("UPDATE_GROUP_URL", "https://t.me/telegram"))
+UPDATE_CHANNEL_URL = os.getenv("UPDATE_CHANNEL_URL", "https://t.me/kirti_bots")
+SUPPORT_URL = os.getenv("SUPPORT_URL", os.getenv("UPDATE_GROUP_URL", "https://t.me/kirti_bots_support"))
 SOURCE_URL = os.getenv("SOURCE_URL", "https://github.com")
 
 # ---- behaviour tuning ----
