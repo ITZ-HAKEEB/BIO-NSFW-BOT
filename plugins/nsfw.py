@@ -34,7 +34,8 @@ HELP = \
 — If a user's profile photo is NSFW, all their messages are deleted until they change it.</blockquote>
 
 <blockquote>⚠️ <b>Note :</b>
-— Group admins and approved users are always exempt.
+— NSFW media is deleted even if an admin sends it. Approved users are exempt.
+— Admins are never checked for profile photo.
 — 👮 Only group admins can configure this setting.</blockquote>"""
 REASON = "NSFW content"
 PROFILE_REASON = "NSFW profile photo"
@@ -224,11 +225,11 @@ async def _profile_bad(context, user):
     return bad
 
 
-async def _process(context, msg, user):
+async def _process(context, msg, user, check_profile=True):
     for f, video in _sources(msg):
         if await _scan(context, f, video):
             return await warn(context, msg, user, REASON)
-    if await _profile_bad(context, user):
+    if check_profile and await _profile_bad(context, user):
         try:
             await msg.delete()
         except Exception as e:
@@ -244,17 +245,19 @@ async def watch(update, context):
     msg, chat, user = update.effective_message, update.effective_chat, update.effective_user
     if not msg or not user or chat.type not in ("group", "supergroup"):
         return
-    if msg.sender_chat or msg.is_automatic_forward or user.is_bot:
+    anon_admin = bool(msg.sender_chat and msg.sender_chat.id == chat.id)   # admin posting anonymously
+    if (msg.sender_chat and not anon_admin) or msg.is_automatic_forward or (user.is_bot and not anon_admin):
         return
     if msg.new_chat_members or msg.left_chat_member:
         return
     s = db.get(chat.id)
     if not s["mods"].get(NAME) or user.id in s["approved"]:
         return
-    if await is_admin(chat.id, user.id, context):
-        return
+    # admins are NOT exempt for NSFW media (their photos get deleted too);
+    # only the profile-photo check skips them
+    admin = anon_admin or await is_admin(chat.id, user.id, context)
     # background task: a slow scan must not block the other updates
-    context.application.create_task(_process(context, msg, user), update=update)
+    context.application.create_task(_process(context, msg, user, check_profile=not admin), update=update)
 
 
 def register(app):
