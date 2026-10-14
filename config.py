@@ -31,20 +31,20 @@ else:
     LOG_GROUP_ID = 0                        # empty / invalid -> logger off
 
 # photo for the "Bot Started" log message (empty = same photo as /start, set with /setimage or START_IMAGE)
-LOG_IMAGE = os.getenv("LOG_IMAGE", "https://anya-file-host.vercel.app/r4vffnlszc")
+LOG_IMAGE = os.getenv("LOG_IMAGE", "")
 
 # ---- font / photo ----
 FONT_STYLE = os.getenv("FONT_STYLE", "smallcaps")                # "smallcaps" or "off"
-OWNER_ID = int(os.getenv("OWNER_ID", "8957532324") or 0)                  # your Telegram user id (for /setimage)
-START_IMAGE = os.getenv("START_IMAGE", "https://anya-file-host.vercel.app/r4vffnlszc")                       # image URL or file_id (optional, /setimage overrides)
+OWNER_ID = int(os.getenv("OWNER_ID", "0") or 0)                  # your Telegram user id (for /setimage)
+START_IMAGE = os.getenv("START_IMAGE", "")                       # image URL or file_id (optional, /setimage overrides)
 
 # ---- bot identity ----
 BOT_NAME = os.getenv("BOT_NAME", "˹Meow x Robot˼ ♡")
 
 # ---- /start buttons (OWNER / UPDATES / SUPPORT / SOURCE) ----
 OWNER_URL = os.getenv("OWNER_URL", "https://t.me/telegram")
-UPDATE_CHANNEL_URL = os.getenv("UPDATE_CHANNEL_URL", "https://t.me/kirti_bots")
-SUPPORT_URL = os.getenv("SUPPORT_URL", os.getenv("UPDATE_GROUP_URL", "https://t.me/kirti_bots_support"))
+UPDATE_CHANNEL_URL = os.getenv("UPDATE_CHANNEL_URL", "https://t.me/telegram")
+SUPPORT_URL = os.getenv("SUPPORT_URL", os.getenv("UPDATE_GROUP_URL", "https://t.me/telegram"))
 SOURCE_URL = os.getenv("SOURCE_URL", "https://github.com")
 
 # ---- behaviour tuning ----
@@ -54,6 +54,17 @@ BIO_CACHE_TTL = int(os.getenv("BIO_CACHE_TTL", "600"))           # seconds to ca
 FSUB_CACHE_TTL = int(os.getenv("FSUB_CACHE_TTL", "60"))          # seconds to cache "user joined channel"
 STYLISH_MIN_CHARS = int(os.getenv("STYLISH_MIN_CHARS", "3"))     # fancy chars needed to trigger nostylish
 DEFAULT_BAD_WORDS = [w for w in os.getenv("DEFAULT_BAD_WORDS", "fuck,bitch,bastard,slut,asshole").split(",") if w]
+
+# ---- NSFW filter (offline NudeNet model, no API) ----
+NSFW_THRESHOLD = float(os.getenv("NSFW_THRESHOLD", "0.5"))        # 0-1, lower = stricter (more false positives)
+NSFW_LABELS = [x.strip() for x in os.getenv(
+    "NSFW_LABELS",
+    "FEMALE_GENITALIA_EXPOSED,MALE_GENITALIA_EXPOSED,FEMALE_BREAST_EXPOSED,BUTTOCKS_EXPOSED,ANUS_EXPOSED",
+).split(",") if x.strip()]
+NSFW_PROFILE_CACHE_TTL = int(os.getenv("NSFW_PROFILE_CACHE_TTL", "3600"))   # seconds before a profile photo is re-checked
+NSFW_SCAN_VIDEO = os.getenv("NSFW_SCAN_VIDEO", "1") != "0"        # also check frames of GIFs/videos (0 = thumbnail only)
+NSFW_VIDEO_MAX_MB = int(os.getenv("NSFW_VIDEO_MAX_MB", "8"))      # bigger videos: thumbnail only
+NSFW_MAX_IMAGE_MB = int(os.getenv("NSFW_MAX_IMAGE_MB", "8"))      # bigger image files: thumbnail only
 
 # ---- texts ----
 START_GREETING = "🛡 Hello {name}! 👋"
