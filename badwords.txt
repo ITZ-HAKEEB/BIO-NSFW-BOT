@@ -1,0 +1,2002 @@
+# Default bad words for abuse filter - one per line, '#' = comment.
+# Add/remove freely. Matching is case-insensitive, whole-word.
+madarchod
+maderchod
+madarchodh
+madharchod
+behenchod
+bhenchod
+behnchod
+bhenchodh
+bhosdike
+bhosdika
+bhosdi
+bhosda
+bhosadi
+bhosadchod
+chutiya
+chutia
+chutiye
+chutiyapa
+chut
+chutad
+chutmarike
+lund
+lauda
+lavda
+lawda
+loda
+lodu
+lodi
+lundoos
+lundure
+gaand
+gand
+gaandu
+gandu
+gandmara
+gaandmasti
+randi
+raand
+randwa
+randibaaz
+haram
+harami
+haramzada
+haramzadi
+haramkhor
+kamina
+kamine
+kaminey
+kamini
+kutta
+kutti
+kutiya
+kuttiya
+saala
+saale
+saali
+sali
+bhadwa
+bhadwe
+bhadve
+bhadwi
+dalal
+gashti
+rakhail
+chinal
+chinaal
+phuddi
+fuddi
+pudi
+lund ka
+chodu
+chod
+chodna
+chudai
+chudna
+chusna
+chus
+jhaatu
+jhatu
+jhant
+jhantu
+tatti
+hijra
+hijda
+chakka
+launda
+launde
+lauda lassan
+suar
+soower
+sooar
+bevda
+bewda
+bewakoof
+nalayak
+nikamma
+ghatiya
+tharki
+tharkee
+kuttiya ki
+gaandfat
+gandfat
+bhosadpappu
+bhosadiwala
+maachod
+maakichut
+maaki
+behenki
+behenkelode
+bakchod
+bakchodi
+bakrichod
+gadha
+gadhe
+ullu ka pattha
+chapri
+chapriyon
+lodu lalit
+lauda lehsun
+lasan
+lund pe
+sasti randi
+mulla
+katua
+bhosri
+bhosrike
+pel
+pelna
+tatte
+chootiya
+chootia
+chutiyam
+chodoo
+chodu bhagat
+gaand mein
+gaand me
+hag
+hagna
+mut
+mutna
+lode
+loda le
+teri maa ki
+teri maa ka
+teri ma ki
+teri behen ki
+teri behna ki
+teri maa ki chut
+teri behen ki chut
+teri maa ka bhosda
+teri gaand
+maa chod
+behen chod
+maa ki aankh
+gaand maar
+gaand mara
+gaand marwa
+lund le
+lund choos
+lund chus
+chut ke
+chut me
+lund ke
+bhosdi ke
+madarchod saale
+bhosdike saale
+randi ke
+randi ki aulad
+haramzade ki aulad
+kutte ki aulad
+kutte kamine
+suar ki aulad
+gandu saala
+fuck
+fucker
+fuckers
+fucking
+fucked
+fuckoff
+fuckyou
+motherfucker
+motherfucking
+mofo
+shit
+shitty
+shithead
+shitface
+bullshit
+bitch
+bitches
+bitchy
+bastard
+bastards
+slut
+sluts
+slutty
+whore
+whores
+hoe
+asshole
+assholes
+arsehole
+arse
+ass
+dick
+dickhead
+dicks
+cock
+cocksucker
+cunt
+cunts
+pussy
+twat
+wanker
+wank
+bollocks
+bugger
+prick
+douche
+douchebag
+jackass
+dumbass
+dumbfuck
+retard
+retarded
+faggot
+fag
+fags
+nigger
+nigga
+niggas
+tits
+boobs
+blowjob
+handjob
+jizz
+cum
+cumshot
+whorehouse
+skank
+scumbag
+piss
+pissed
+crap
+damn
+dammit
+bimbo
+pervert
+horny
+porn
+porno
+sex bomb
+slutface
+cumslut
+dickface
+shitbag
+shithole
+motherfuckers
+fuckface
+fuckhead
+fuckwit
+twatface
+cockhead
+maadaarchod
+maadarchod
+madarcod
+maaderchod
+madercod
+maadaarchodh
+maadarchodh
+madarcodh
+maadhaarchod
+maadharchod
+madharcod
+beenchod
+beencod
+behencod
+benchod
+bencod
+bhencod
+behncod
+benchodh
+bhencodh
+bhosdeeke
+bosdike
+bhosdeeka
+bhosdikaa
+bosdika
+bhosdee
+bosdi
+bhosdaa
+bosda
+bhosaadi
+bhosadee
+bosadi
+bhosaadchod
+bhosadcod
+bosadchod
+bosadcod
+chuteeya
+chutiyaa
+cutiya
+chuteea
+chutiaa
+cutia
+chootiye
+chuteeye
+cutiye
+chootiyapa
+chuteeyapa
+chutiyaapa
+chutiyaapaa
+cutiyapa
+choot
+cut
+chootad
+chutaad
+cutad
+chootmarike
+chutmaarike
+chutmareeke
+cutmarike
+loond
+laauda
+laaudaa
+laooda
+laavda
+laavdaa
+laawda
+laawdaa
+lodaa
+lodoo
+lodee
+loondoos
+lundus
+loondoore
+loondure
+gaaaand
+gaaand
+gaaaandu
+gaaandu
+gaandoo
+gandoo
+gaandmaaraa
+gaandmara
+gaaaandmaasti
+gaaandmasti
+gaandmastee
+gandmasti
+raandi
+randee
+raaaand
+raaand
+rand
+raandwa
+raandwaa
+randva
+raandibaaaaz
+raandibaaz
+randeebaaz
+randibaz
+aram
+haaraam
+haaram
+arami
+haaraami
+haarami
+haramee
+aramzada
+haaraamzaadaa
+haaramzada
+aramzadi
+haaraamzaadi
+haaramzadi
+haramzadee
+aramkhor
+aramkor
+haaraamkhor
+haaramkhor
+haramkor
+kaamina
+kaaminaa
+kameena
+kaamine
+kameene
+kaaminey
+kameeney
+kaamini
+kameenee
+kameeni
+kootta
+kuttaa
+kootti
+kuttee
+kootiya
+kuteeya
+kutiyaa
+koottiya
+kutteeya
+kuttiyaa
+saaaalaa
+saaala
+sala
+saaaale
+saaale
+sale
+saaaali
+saaali
+saalee
+salee
+badwa
+bhaadwa
+bhaadwaa
+bhadva
+badwe
+bhaadwe
+badve
+bhaadve
+badwi
+bhaadwi
+bhadvi
+bhadwee
+daalaal
+daalal
+gaashti
+gashtee
+gasti
+raakhaail
+raakhail
+rakail
+rakhaeel
+cheenal
+cinal
+cheenaal
+chinaaaal
+chinaaal
+cinaal
+phooddi
+phuddee
+puddi
+fooddi
+fuddee
+poodi
+pudee
+loond ka
+lund kaa
+codu
+cod
+chodnaa
+codna
+choodai
+chudaai
+chudaee
+cudai
+choodna
+chudnaa
+cudna
+choosna
+chusnaa
+cusna
+choos
+cus
+jaatu
+jhaaaatu
+jhaaatu
+jhaatoo
+jatu
+jhatoo
+jant
+jhaant
+jantu
+jhaantu
+jhantoo
+taatti
+tattee
+heejra
+hijraa
+ijra
+heejda
+hijdaa
+ijda
+cakka
+chaakka
+chaakkaa
+laaunda
+laaundaa
+laoonda
+laaunde
+laoonde
+laauda lassan
+laaudaa laassaan
+laooda lassan
+suaar
+soover
+suwer
+sooaar
+bevdaa
+bewdaa
+bevakoof
+bewaakoof
+bewakooph
+bewakuf
+naalaayaak
+naalayak
+neekamma
+nikaamma
+nikaammaa
+gatiya
+ghaatiya
+ghaatiyaa
+ghateeya
+tarki
+thaarki
+tarkee
+thaarkee
+koottiya ki
+kutteeya kee
+kutteeya ki
+kuttiyaa ki
+gaaaandfaat
+gaaandfat
+gaandphat
+gaandfaat
+gandphat
+bhosaadpaappu
+bhosaadpappu
+bhosadpappoo
+bosadpappu
+bhosaadiwaalaa
+bhosaadiwala
+bhosadeewala
+bhosadivala
+bosadiwala
+maaaachod
+maaachod
+maacod
+machod
+maaaakichut
+maaakichut
+maakeechut
+maakichoot
+maakicut
+makichut
+maaaaki
+maaaki
+maakee
+maki
+beenki
+behenkee
+beenkelode
+baakchod
+bakcod
+baakchodi
+bakchodee
+bakcodi
+baakrichod
+bakreechod
+bakricod
+gaadha
+gaadhaa
+gada
+gaadhe
+gade
+oolloo ka pattha
+oollu ka pattha
+ullu ka patta
+ullu kaa paatthaa
+ullu kaa pattha
+capri
+chaapri
+chapree
+capriyon
+chaapriyon
+chapreeyon
+lodoo lalit
+lodu laalit
+lodu laleet
+laauda lehsun
+laaudaa lehsun
+laooda lehsoon
+laooda lehsun
+lauda lesun
+laasaan
+laasan
+loond pe
+saasti raandi
+saasti randi
+sastee randee
+sastee randi
+moolla
+mullaa
+kaatua
+kaatuaa
+katooa
+bhosree
+bosri
+bhosreeke
+bosrike
+pelnaa
+taatte
+chooteeya
+chootiyaa
+cootiya
+chooteea
+chootiaa
+cootia
+chootiyam
+chuteeyam
+chutiyaam
+cutiyam
+codoo
+chodoo bhagat
+chodu bhaagaat
+chodu bhaagat
+codu bagat
+codu bhagat
+gaaaand mein
+gaaand mein
+gaand meeen
+gand mein
+gaaaand me
+gaaand me
+gand me
+haag
+agna
+haagna
+haagnaa
+moot
+mootna
+mutnaa
+lodaa le
+teree maa kee
+teree maa ki
+teri maaa ki
+teri maaaa ki
+teree maa ka
+teri ma ka
+teri maaa ka
+teri maaaa kaa
+teree ma kee
+teree ma ki
+teree behen kee
+teree behen ki
+teri been ki
+teree behna kee
+teree behna ki
+teri behnaa ki
+teri bena ki
+teree maa kee chut
+teree maa ki chut
+teri ma ki chut
+teri maa ki choot
+teri maa ki cut
+teri maaa ki chut
+teri maaaa ki chut
+teree behen kee chut
+teree behen ki chut
+teri been ki chut
+teri been ki cut
+teri behen ki choot
+teri behen ki cut
+teree maa ka bhosda
+teri ma ka bhosda
+teri maa ka bosda
+teri maaa ka bhosda
+teri maaaa kaa bhosdaa
+teree gaand
+teri gaaaand
+teri gaaand
+teri gand
+ma chod
+maa cod
+maaa chod
+maaaa chod
+been chod
+been cod
+behen cod
+ma ki aankh
+ma ki ankh
+maa kee aankh
+maa ki aank
+maaa ki aankh
+maaaa ki aaaankh
+gaaaand maaaar
+gaaand maar
+gand maar
+gand mar
+gaaaand maaraa
+gaaand mara
+gand mara
+gaaaand maarwaa
+gaaand marwa
+gaand marva
+gand marwa
+loond le
+loond choos
+lund coos
+loond chus
+lund cus
+choot ke
+cut ke
+choot me
+cut me
+loond ke
+bhosdee ke
+bosdi ke
+maadaarchod saaaale
+maadarchod saale
+madarchod sale
+madarcod saale
+bhosdeeke saale
+bhosdike saaaale
+bhosdike saaale
+bhosdike sale
+bosdike saale
+raandi ke
+randee ke
+raandi ki aaulaad
+raandi ki aulad
+randee kee aulad
+randee ki aulad
+randi ki aoolad
+aramzade ki aulad
+haaraamzaade ki aaulaad
+haaramzade ki aulad
+haramzade kee aulad
+haramzade ki aoolad
+kootte ki aoolad
+kootte ki aulad
+kutte kee aulad
+kutte ki aaulaad
+kutte ki aaulad
+kootte kamine
+kutte kaamine
+kutte kameene
+sooar ki aoolad
+sooar ki aulad
+suaar ki aaulaad
+suaar ki aulad
+suar kee aulad
+gaandu saaaalaa
+gaandu saala
+gandoo saala
+gandu sala
+foock
+phuck
+foocker
+phucker
+foockers
+phuckers
+foocking
+fuckeeng
+phucking
+foocked
+phucked
+foockoff
+phuckoff
+phuckophph
+foockyooo
+foockyou
+phuckyou
+moterfucker
+motherfoocker
+motherphucker
+moterfucking
+motherfoocking
+motherfuckeeng
+motherphucking
+mopho
+sheet
+sit
+sheetty
+sitty
+sheethead
+shitheaad
+sitead
+sithead
+sheetface
+shitfaace
+shitphace
+sitface
+boollshit
+bullsheet
+bullsit
+beetch
+bitc
+beetches
+bitces
+beetchy
+bitcy
+baastaard
+baastard
+baastaards
+baastards
+sloot
+sloots
+slootty
+vhore
+wore
+vhores
+wores
+aasshole
+assole
+aassholes
+assoles
+aarsehole
+arseole
+aarse
+aass
+deeck
+deeckhead
+dickead
+dickheaad
+deecks
+cocksoocker
+coont
+coonts
+poossy
+tvat
+twaat
+vanker
+waanker
+vank
+waank
+boogger
+preeck
+doooche
+douce
+dooochebag
+doucebag
+douchebaag
+jaackaass
+jaackass
+doombass
+dumbaass
+doombfoock
+doombfuck
+dumbphuck
+retaard
+retaarded
+faaggot
+phaggot
+faag
+phag
+faags
+phags
+neegger
+neegga
+niggaa
+neeggas
+niggaas
+teets
+bubs
+blovjob
+andjob
+haandjob
+jeezz
+coom
+coomshot
+cumsot
+vhorehouse
+whorehooose
+worehouse
+woreouse
+skaank
+scoombag
+scumbaag
+peess
+peessed
+craap
+daamn
+daammit
+dammeet
+beembo
+perwert
+orny
+slootface
+slutfaace
+slutphace
+coomsloot
+coomslut
+deeckface
+dickfaace
+dickphace
+sheetbag
+shitbaag
+sitbag
+sheethole
+sithole
+sitole
+moterfuckers
+motherfoockers
+motherphuckers
+foockface
+fuckfaace
+phuckface
+phuckphace
+foockhead
+fuckead
+fuckheaad
+phuckhead
+foockwit
+fuckvit
+fuckweet
+phuckwit
+tvatface
+twaatfaace
+twaatface
+twatphace
+cockead
+cockheaad
+m a d a r c h o d
+m.a.d.a.r.c.h.o.d
+m@d@rchod
+m_a_d_a_r_c_h_o_d
+madarch0d
+madarchodd
+m a d e r c h o d
+m.a.d.e.r.c.h.o.d
+m@derchod
+m_a_d_e_r_c_h_o_d
+mad3rchod
+maderch0d
+maderchodd
+m a d a r c h o d h
+m.a.d.a.r.c.h.o.d.h
+m@d@rchodh
+m_a_d_a_r_c_h_o_d_h
+madarch0dh
+madarchodhh
+m a d h a r c h o d
+m.a.d.h.a.r.c.h.o.d
+m@dh@rchod
+m_a_d_h_a_r_c_h_o_d
+madharch0d
+madharchodd
+b e h e n c h o d
+b.e.h.e.n.c.h.o.d
+b3h3nchod
+b_e_h_e_n_c_h_o_d
+behench0d
+behenchodd
+b h e n c h o d
+b.h.e.n.c.h.o.d
+b_h_e_n_c_h_o_d
+bh3nchod
+bhench0d
+bhenchodd
+b e h n c h o d
+b.e.h.n.c.h.o.d
+b3hnchod
+b_e_h_n_c_h_o_d
+behnch0d
+behnchodd
+b h e n c h o d h
+b.h.e.n.c.h.o.d.h
+b_h_e_n_c_h_o_d_h
+bh3nchodh
+bhench0dh
+bhenchodhh
+b h o s d i k e
+b.h.o.s.d.i.k.e
+b_h_o_s_d_i_k_e
+bh0sdike
+bho$dike
+bhosd1ke
+bhosdik3
+bhosdikee
+b h o s d i k a
+b.h.o.s.d.i.k.a
+b_h_o_s_d_i_k_a
+bh0sdika
+bho$dika
+bhosd1ka
+bhosdik@
+b h o s d i
+b.h.o.s.d.i
+b_h_o_s_d_i
+bh0sdi
+bho$di
+bhosd1
+bhosdii
+b h o s d a
+b.h.o.s.d.a
+b_h_o_s_d_a
+bh0sda
+bho$da
+bhosd@
+b h o s a d i
+b.h.o.s.a.d.i
+b_h_o_s_a_d_i
+bh0sadi
+bho$adi
+bhos@di
+bhosad1
+bhosadii
+b h o s a d c h o d
+b.h.o.s.a.d.c.h.o.d
+b_h_o_s_a_d_c_h_o_d
+bh0sadch0d
+bho$adchod
+bhos@dchod
+bhosadchodd
+c h u t i y a
+c.h.u.t.i.y.a
+c_h_u_t_i_y_a
+chut1ya
+chutiy@
+chvtiya
+c h u t i a
+c.h.u.t.i.a
+c_h_u_t_i_a
+chut1a
+chuti@
+chvtia
+c h u t i y e
+c.h.u.t.i.y.e
+c_h_u_t_i_y_e
+chut1ye
+chutiy3
+chutiyee
+chvtiye
+c h u t i y a p a
+c.h.u.t.i.y.a.p.a
+c_h_u_t_i_y_a_p_a
+chut1yapa
+chutiy@p@
+chutiyapaa
+chvtiyapa
+c h u t
+c.h.u.t
+c_h_u_t
+chutt
+chvt
+c h u t a d
+c.h.u.t.a.d
+c_h_u_t_a_d
+chut@d
+chutadd
+chvtad
+c h u t m a r i k e
+c.h.u.t.m.a.r.i.k.e
+c_h_u_t_m_a_r_i_k_e
+chutm@rike
+chutmar1ke
+chutmarik3
+chutmarikee
+chvtmarike
+l u n d
+l.u.n.d
+l_u_n_d
+lundd
+lvnd
+l a u d a
+l.a.u.d.a
+l@ud@
+l_a_u_d_a
+laudaa
+l a v d a
+l.a.v.d.a
+l@vd@
+l_a_v_d_a
+lavdaa
+l a w d a
+l.a.w.d.a
+l@wd@
+l_a_w_d_a
+lawdaa
+l o d a
+l.o.d.a
+l0da
+l_o_d_a
+lod@
+l o d u
+l.o.d.u
+l0du
+l_o_d_u
+loduu
+lodv
+l o d i
+l.o.d.i
+l0di
+l_o_d_i
+lod1
+lodii
+l u n d o o s
+l.u.n.d.o.o.s
+l_u_n_d_o_o_s
+lund00s
+lundoo$
+lundooss
+lvndoos
+l u n d u r e
+l.u.n.d.u.r.e
+l_u_n_d_u_r_e
+lundur3
+lunduree
+lvndvre
+g a a n d
+g.a.a.n.d
+g@@nd
+g_a_a_n_d
+gaandd
+g a n d
+g.a.n.d
+g@nd
+g_a_n_d
+gandd
+g a a n d u
+g.a.a.n.d.u
+g@@ndu
+g_a_a_n_d_u
+gaanduu
+gaandv
+g a n d u
+g.a.n.d.u
+g@ndu
+g_a_n_d_u
+ganduu
+gandv
+g a n d m a r a
+g.a.n.d.m.a.r.a
+g@ndm@r@
+g_a_n_d_m_a_r_a
+gandmaraa
+g a a n d m a s t i
+g.a.a.n.d.m.a.s.t.i
+g@@ndm@sti
+g_a_a_n_d_m_a_s_t_i
+gaandma$ti
+gaandmast1
+gaandmastii
+r a n d i
+r.a.n.d.i
+r@ndi
+r_a_n_d_i
+rand1
+randii
+r a a n d
+r.a.a.n.d
+r@@nd
+r_a_a_n_d
+raandd
+r a n d w a
+r.a.n.d.w.a
+r@ndw@
+r_a_n_d_w_a
+randwaa
+r a n d i b a a z
+r.a.n.d.i.b.a.a.z
+r@ndib@@z
+r_a_n_d_i_b_a_a_z
+rand1baaz
+randibaazz
+h a r a m
+h.a.r.a.m
+h@r@m
+h_a_r_a_m
+haramm
+h a r a m i
+h.a.r.a.m.i
+h@r@mi
+h_a_r_a_m_i
+haram1
+haramii
+h a r a m z a d a
+h.a.r.a.m.z.a.d.a
+h@r@mz@d@
+h_a_r_a_m_z_a_d_a
+haramzadaa
+h a r a m z a d i
+h.a.r.a.m.z.a.d.i
+h@r@mz@di
+h_a_r_a_m_z_a_d_i
+haramzad1
+haramzadii
+h a r a m k h o r
+h.a.r.a.m.k.h.o.r
+h@r@mkhor
+h_a_r_a_m_k_h_o_r
+haramkh0r
+haramkhorr
+k a m i n a
+k.a.m.i.n.a
+k@min@
+k_a_m_i_n_a
+kam1na
+kaminaa
+k a m i n e
+k.a.m.i.n.e
+k@mine
+k_a_m_i_n_e
+kam1ne
+kamin3
+kaminee
+k a m i n e y
+k.a.m.i.n.e.y
+k@miney
+k_a_m_i_n_e_y
+kam1ney
+kamin3y
+kamineyy
+k a m i n i
+k.a.m.i.n.i
+k@mini
+k_a_m_i_n_i
+kam1n1
+kaminii
+k u t t a
+k.u.t.t.a
+k_u_t_t_a
+kutt@
+kvtta
+k u t t i
+k.u.t.t.i
+k_u_t_t_i
+kutt1
+kuttii
+kvtti
+k u t i y a
+k.u.t.i.y.a
+k_u_t_i_y_a
+kut1ya
+kutiy@
+kvtiya
+k u t t i y a
+k.u.t.t.i.y.a
+k_u_t_t_i_y_a
+kutt1ya
+kuttiy@
+kvttiya
+$aala
+s a a l a
+s.a.a.l.a
+s@@l@
+s_a_a_l_a
+saalaa
+$aale
+s a a l e
+s.a.a.l.e
+s@@le
+s_a_a_l_e
+saal3
+$aali
+s a a l i
+s.a.a.l.i
+s@@li
+s_a_a_l_i
+saal1
+saalii
+$ali
+s a l i
+s.a.l.i
+s@li
+s_a_l_i
+sal1
+salii
+b h a d w a
+b.h.a.d.w.a
+b_h_a_d_w_a
+bh@dw@
+bhadwaa
+b h a d w e
+b.h.a.d.w.e
+b_h_a_d_w_e
+bh@dwe
+bhadw3
+b h a d v e
+b.h.a.d.v.e
+b_h_a_d_v_e
+bh@dve
+bhadv3
+bhadvee
+b h a d w i
+b.h.a.d.w.i
+b_h_a_d_w_i
+bh@dwi
+bhadw1
+bhadwii
+d a l a l
+d.a.l.a.l
+d@l@l
+d_a_l_a_l
+dalall
+g a s h t i
+g.a.s.h.t.i
+g@shti
+g_a_s_h_t_i
+ga$hti
+gasht1
+gashtii
+r a k h a i l
+r.a.k.h.a.i.l
+r@kh@il
+r_a_k_h_a_i_l
+rakha1l
+rakhaill
+c h i n a l
+c.h.i.n.a.l
+c_h_i_n_a_l
+ch1nal
+chin@l
+chinall
+c h i n a a l
+c.h.i.n.a.a.l
+c_h_i_n_a_a_l
+ch1naal
+chin@@l
+chinaall
+p h u d d i
+p.h.u.d.d.i
+p_h_u_d_d_i
+phudd1
+phuddii
+phvddi
+f u d d i
+f.u.d.d.i
+f_u_d_d_i
+fudd1
+fuddii
+fvddi
+p u d i
+p.u.d.i
+p_u_d_i
+pud1
+pudii
+pvdi
+lund k@
+lvnd ka
+c h o d u
+c.h.o.d.u
+c_h_o_d_u
+ch0du
+choduu
+chodv
+c h o d
+c.h.o.d
+c_h_o_d
+ch0d
+chodd
+c h o d n a
+c.h.o.d.n.a
+c_h_o_d_n_a
+ch0dna
+chodn@
+c h u d a i
+c.h.u.d.a.i
+c_h_u_d_a_i
+chud@i
+chuda1
+chudaii
+chvdai
+c h u d n a
+c.h.u.d.n.a
+c_h_u_d_n_a
+chudn@
+chvdna
+c h u s n a
+c.h.u.s.n.a
+c_h_u_s_n_a
+chu$na
+chusn@
+chvsna
+c h u s
+c.h.u.s
+c_h_u_s
+chu$
+chuss
+chvs
+j h a a t u
+j.h.a.a.t.u
+j_h_a_a_t_u
+jh@@tu
+jhaatuu
+jhaatv
+j h a t u
+j.h.a.t.u
+j_h_a_t_u
+jh@tu
+jhatuu
+jhatv
+j h a n t
+j.h.a.n.t
+j_h_a_n_t
+jh@nt
+jhantt
+j h a n t u
+j.h.a.n.t.u
+j_h_a_n_t_u
+jh@ntu
+jhantuu
+jhantv
+t a t t i
+t.a.t.t.i
+t@tti
+t_a_t_t_i
+tatt1
+tattii
+h i j r a
+h.i.j.r.a
+h1jra
+h_i_j_r_a
+hijr@
+h i j d a
+h.i.j.d.a
+h1jda
+h_i_j_d_a
+hijd@
+c h a k k a
+c.h.a.k.k.a
+c_h_a_k_k_a
+ch@kk@
+chakkaa
+l a u n d a
+l.a.u.n.d.a
+l@und@
+l_a_u_n_d_a
+laundaa
+lavnda
+l a u n d e
+l.a.u.n.d.e
+l@unde
+l_a_u_n_d_e
+laund3
+laundee
+lavnde
+l@ud@ l@ss@n
+lauda la$$an
+lauda lassann
+lavda lassan
+$uar
+s u a r
+s.u.a.r
+s_u_a_r
+su@r
+suarr
+svar
+$oower
+s o o w e r
+s.o.o.w.e.r
+s00wer
+s_o_o_w_e_r
+soow3r
+soowerr
+$ooar
+s o o a r
+s.o.o.a.r
+s00ar
+s_o_o_a_r
+soo@r
+sooarr
+b e v d a
+b.e.v.d.a
+b3vda
+b_e_v_d_a
+bevd@
+b e w d a
+b.e.w.d.a
+b3wda
+b_e_w_d_a
+bewd@
+b e w a k o o f
+b.e.w.a.k.o.o.f
+b3wakoof
+b_e_w_a_k_o_o_f
+bew@koof
+bewak00f
+bewakooff
+n a l a y a k
+n.a.l.a.y.a.k
+n@l@y@k
+n_a_l_a_y_a_k
+nalayakk
+n i k a m m a
+n.i.k.a.m.m.a
+n1kamma
+n_i_k_a_m_m_a
+nik@mm@
+nikammaa
+g h a t i y a
+g.h.a.t.i.y.a
+g_h_a_t_i_y_a
+gh@tiy@
+ghat1ya
+ghatiyaa
+t h a r k i
+t.h.a.r.k.i
+t_h_a_r_k_i
+th@rki
+thark1
+tharkii
+t h a r k e e
+t.h.a.r.k.e.e
+t_h_a_r_k_e_e
+th@rkee
+thark33
+tharkeee
+kutt1ya k1
+kuttiy@ ki
+kuttiya kii
+kvttiya ki
+g a a n d f a t
+g.a.a.n.d.f.a.t
+g@@ndf@t
+g_a_a_n_d_f_a_t
+gaandfatt
+g a n d f a t
+g.a.n.d.f.a.t
+g@ndf@t
+g_a_n_d_f_a_t
+gandfatt
+bh0sadpappu
+bho$adpappu
+bhos@dp@ppu
+bhosadpappuu
+bhosadpappv
+bh0sadiwala
+bho$adiwala
+bhos@diw@l@
+bhosad1wala
+bhosadiwalaa
+m a a c h o d
+m.a.a.c.h.o.d
+m@@chod
+m_a_a_c_h_o_d
+maach0d
+maachodd
+m a a k i c h u t
+m.a.a.k.i.c.h.u.t
+m@@kichut
+m_a_a_k_i_c_h_u_t
+maak1chut
+maakichutt
+maakichvt
+m a a k i
+m.a.a.k.i
+m@@ki
+m_a_a_k_i
+maak1
+maakii
+b e h e n k i
+b.e.h.e.n.k.i
+b3h3nki
+b_e_h_e_n_k_i
+behenk1
+behenkii
+b3h3nk3lod3
+behenkel0de
+behenkelodee
+b a k c h o d
+b.a.k.c.h.o.d
+b@kchod
+b_a_k_c_h_o_d
+bakch0d
+bakchodd
+b a k c h o d i
+b.a.k.c.h.o.d.i
+b@kchodi
+b_a_k_c_h_o_d_i
+bakch0di
+bakchod1
+bakchodii
+b a k r i c h o d
+b.a.k.r.i.c.h.o.d
+b@krichod
+b_a_k_r_i_c_h_o_d
+bakr1chod
+bakrich0d
+bakrichodd
+g a d h a
+g.a.d.h.a
+g@dh@
+g_a_d_h_a
+gadhaa
+g a d h e
+g.a.d.h.e
+g@dhe
+g_a_d_h_e
+gadh3
+gadhee
+ullu k@ p@tth@
+ullu ka patthaa
+vllv ka pattha
+c h a p r i
+c.h.a.p.r.i
+c_h_a_p_r_i
+ch@pri
+chapr1
+chaprii
+c h a p r i y o n
+c.h.a.p.r.i.y.o.n
+c_h_a_p_r_i_y_o_n
+ch@priyon
+chapr1yon
+chapriy0n
+chapriyonn
+l0du lalit
+lodu l@lit
+lodu lal1t
+lodu lalitt
+lodv lalit
+l@ud@ lehsun
+lauda l3hsun
+lauda leh$un
+lauda lehsunn
+lavda lehsvn
+l a s a n
+l.a.s.a.n
+l@s@n
+l_a_s_a_n
+la$an
+lasann
+lund p3
+lund pee
+lvnd pe
+$a$ti randi
+s@sti r@ndi
+sast1 rand1
+sasti randii
+m u l l a
+m.u.l.l.a
+m_u_l_l_a
+mull@
+mvlla
+k a t u a
+k.a.t.u.a
+k@tu@
+k_a_t_u_a
+katuaa
+katva
+b h o s r i
+b.h.o.s.r.i
+b_h_o_s_r_i
+bh0sri
+bho$ri
+bhosr1
+bhosrii
+b h o s r i k e
+b.h.o.s.r.i.k.e
+b_h_o_s_r_i_k_e
+bh0srike
+bho$rike
+bhosr1ke
+bhosrik3
+bhosrikee
+p3l
+pell
+p e l n a
+p.e.l.n.a
+p3lna
+p_e_l_n_a
+peln@
+t a t t e
+t.a.t.t.e
+t@tte
+t_a_t_t_e
+tatt3
+c h o o t i y a
+c.h.o.o.t.i.y.a
+c_h_o_o_t_i_y_a
+ch00tiya
+choot1ya
+chootiy@
+c h o o t i a
+c.h.o.o.t.i.a
+c_h_o_o_t_i_a
+ch00tia
+choot1a
+chooti@
+c h u t i y a m
+c.h.u.t.i.y.a.m
+c_h_u_t_i_y_a_m
+chut1yam
+chutiy@m
+chutiyamm
+chvtiyam
+c h o d o o
+c.h.o.d.o.o
+c_h_o_d_o_o
+ch0d00
+chodooo
+ch0du bhagat
+chodu bh@g@t
+chodu bhagatt
+chodv bhagat
+g@@nd mein
+gaand m3in
+gaand me1n
+gaand meinn
+g@@nd me
+gaand m3
+gaand mee
+h@g
+hagg
+h a g n a
+h.a.g.n.a
+h@gn@
+h_a_g_n_a
+hagnaa
+mutt
+mvt
+m u t n a
+m.u.t.n.a
+m_u_t_n_a
+mutn@
+mvtna
+l o d e
+l.o.d.e
+l0de
+l_o_d_e
+lod3
+l0da le
+lod@ le
+loda l3
+loda lee
+t3ri maa ki
+ter1 maa k1
+teri m@@ ki
+teri maa kii
+t3ri maa ka
+ter1 maa ka
+teri m@@ k@
+teri maa kaa
+t3ri ma ki
+ter1 ma k1
+teri m@ ki
+teri ma kii
+t3ri b3h3n ki
+ter1 behen k1
+teri behen kii
+t3ri b3hna ki
+ter1 behna k1
+teri behn@ ki
+teri behna kii
+t3ri maa ki chut
+ter1 maa k1 chut
+teri m@@ ki chut
+teri maa ki chutt
+teri maa ki chvt
+t3ri b3h3n ki chut
+ter1 behen k1 chut
+teri behen ki chutt
+teri behen ki chvt
+t3ri maa ka bhosda
+ter1 maa ka bhosda
+teri m@@ k@ bhosd@
+teri maa ka bh0sda
+teri maa ka bho$da
+teri maa ka bhosdaa
+t3ri gaand
+ter1 gaand
+teri g@@nd
+teri gaandd
+m@@ chod
+maa ch0d
+maa chodd
+b3h3n chod
+behen ch0d
+behen chodd
+m@@ ki @@nkh
+maa k1 aankh
+maa ki aankhh
+g@@nd m@@r
+gaand maarr
+g@@nd m@r@
+gaand maraa
+g@@nd m@rw@
+gaand marwaa
+lund l3
+lund lee
+lvnd le
+lund ch00s
+lund choo$
+lund chooss
+lvnd choos
+lund chu$
+lund chuss
+lvnd chvs
+chut k3
+chut kee
+chvt ke
+chut m3
+chut mee
+chvt me
+lund k3
+lund kee
+lvnd ke
+bh0sdi ke
+bho$di ke
+bhosd1 ke
+bhosdi k3
+bhosdi kee
+m@d@rchod s@@le
+madarch0d saale
+madarchod $aale
+madarchod saal3
+madarchod saalee
+bh0sdike saale
+bho$dike $aale
+bhosd1ke saale
+bhosdik3 saal3
+bhosdike s@@le
+bhosdike saalee
+r@ndi ke
+rand1 ke
+randi k3
+randi kee
+r@ndi ki @ul@d
+rand1 k1 aulad
+randi ki auladd
+randi ki avlad
+h@r@mz@de ki @ul@d
+haramzad3 ki aulad
+haramzade k1 aulad
+haramzade ki auladd
+haramzade ki avlad
+kutt3 ki aulad
+kutte k1 aulad
+kutte ki @ul@d
+kutte ki auladd
+kvtte ki avlad
+kutt3 kamin3
+kutte k@mine
+kutte kam1ne
+kutte kaminee
+kvtte kamine
+$uar ki aulad
+su@r ki @ul@d
+suar k1 aulad
+suar ki auladd
+svar ki avlad
+g@ndu s@@l@
+gandu $aala
+gandu saalaa
+gandv saala
+f u c k
+f.u.c.k
+f_u_c_k
+fuckk
+fvck
+f u c k e r
+f.u.c.k.e.r
+f_u_c_k_e_r
+fuck3r
+fuckerr
+fvcker
+f u c k e r s
+f.u.c.k.e.r.s
+f_u_c_k_e_r_s
+fuck3rs
+fucker$
+fuckerss
+fvckers
+f u c k i n g
+f.u.c.k.i.n.g
+f_u_c_k_i_n_g
+fuck1ng
+fuckingg
+fvcking
+f u c k e d
+f.u.c.k.e.d
+f_u_c_k_e_d
+fuck3d
+fuckedd
+fvcked
+f u c k o f f
+f.u.c.k.o.f.f
+f_u_c_k_o_f_f
+fuck0ff
+fuckofff
+fvckoff
+f u c k y o u
+f.u.c.k.y.o.u
+f_u_c_k_y_o_u
+fucky0u
+fuckyouu
+fvckyov
+m0therfucker
+moth3rfuck3r
+motherfuckerr
+motherfvcker
+m0therfucking
+moth3rfucking
+motherfuck1ng
+motherfuckingg
+motherfvcking
+m o f o
+m.o.f.o
+m0f0
+m_o_f_o
+mofoo
+$hit
+s h i t
+s.h.i.t
+s_h_i_t
+sh1t
+shitt
+$hitty
+s h i t t y
+s.h.i.t.t.y
+s_h_i_t_t_y
+sh1tty
+shittyy
+$hithead
+s h i t h e a d
+s.h.i.t.h.e.a.d
+s_h_i_t_h_e_a_d
+sh1thead
+shith3ad
+shithe@d
+shitheadd
+$hitface
+s h i t f a c e
+s.h.i.t.f.a.c.e
+s_h_i_t_f_a_c_e
+sh1tface
+shitf@ce
+shitfac3
+shitfacee
+b u l l s h i t
+b.u.l.l.s.h.i.t
+b_u_l_l_s_h_i_t
+bull$hit
+bullsh1t
+bullshitt
+bvllshit
+b i t c h
+b.i.t.c.h
+b1tch
+b_i_t_c_h
+bitchh
+b i t c h e s
+b.i.t.c.h.e.s
+b1tches
+b_i_t_c_h_e_s
+bitch3s
+bitche$
+bitchess
+b i t c h y
+b.i.t.c.h.y
+b1tchy
+b_i_t_c_h_y
+bitchyy
+b a s t a r d
+b.a.s.t.a.r.d
+b@st@rd
+b_a_s_t_a_r_d
+ba$tard
+bastardd
+b a s t a r d s
+b.a.s.t.a.r.d.s
+b@st@rds
+b_a_s_t_a_r_d_s
+ba$tard$
+bastardss
+$lut
+s l u t
+s.l.u.t
+s_l_u_t
+slutt
+slvt
+$lut$
+s l u t s
+s.l.u.t.s
+s_l_u_t_s
+slutss
+slvts
+$lutty
+s l u t t y
+s.l.u.t.t.y
+s_l_u_t_t_y
+sluttyy
+slvtty
+w h o r e
+w.h.o.r.e
+w_h_o_r_e
+wh0re
+whor3
+whoree
+w h o r e s
+w.h.o.r.e.s
+w_h_o_r_e_s
+wh0res
+whor3s
+whore$
+whoress
+h0e
+ho3
+hoee
+@sshole
+a s s h o l e
+a$$hole
+a.s.s.h.o.l.e
+a_s_s_h_o_l_e
+assh0le
+asshol3
+assholee
+@ssholes
+a s s h o l e s
+a$$hole$
