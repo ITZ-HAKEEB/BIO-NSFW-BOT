@@ -14,24 +14,24 @@ from plugins import logs
 HTML = ParseMode.HTML
 PER_PAGE = 6
 
-# Help modules — alphabetical order, 6 per page
+# ---- Stylish help modules ----
 HELP_MODULES = [
-    ("Abuse", "abuse"),
-    ("Approve", "approve"),
-    ("Bio-Mode", "biomode"),
-    ("Echo", "echo"),
-    ("Edit", "edit"),
-    ("F-Sub", "fsub"),
-    ("Fonts", "nostylish"),
-    ("Forward", "noforward"),
-    ("Link-Filter", "linkfilter"),
-    ("Media-Del", "mediadelete"),
-    ("Msg-Del", "msgdelete"),
-    ("No-Hash", "nohashtags"),
-    ("NSFW", "nsfw"),
-    ("Phone", "nophone"),
-    ("Promo", "nopromo"),
-    ("Purge", "purge"),
+    ("𝐀ʙᴜꜱᴇ", "abuse"),
+    ("𝐀ᴘᴘʀᴏᴠᴇ", "approve"),
+    ("𝐁ɪᴏ-𝐌ᴏᴅᴇ", "biomode"),
+    ("𝐄ᴄʜᴏ", "echo"),
+    ("𝐄ᴅɪᴛ", "edit"),
+    ("𝐅-𝐒ᴜʙ", "fsub"),
+    ("𝐅ᴏɴᴛꜱ", "nostylish"),
+    ("𝐅ᴏʀᴡᴀʀᴅ", "noforward"),
+    ("𝐋ɪɴᴋ-𝐅ɪʟᴛᴇʀ", "linkfilter"),
+    ("𝐌ᴇᴅɪᴀ-𝐃ᴇʟ", "mediadelete"),
+    ("𝐌ꜱɢ-𝐃ᴇʟ", "msgdelete"),
+    ("𝐍ᴏ-𝐇ᴀꜱʜ", "nohashtags"),
+    ("𝐍𝐒𝐅𝐖", "nsfw"),
+    ("𝐏ʜᴏɴᴇ", "nophone"),
+    ("𝐏ʀᴏᴍᴏ", "nopromo"),
+    ("𝐏ᴜʀɢᴇ", "purge"),
 ]
 
 PAGES = (len(HELP_MODULES) + PER_PAGE - 1) // PER_PAGE
@@ -48,6 +48,7 @@ def start_text(name):
     greet = style(config.START_GREETING).format(
         name=style(safe_name)
     )
+
     body = style(config.START_BODY).format(
         bot_name=style(safe_bot_name)
     )
@@ -117,6 +118,7 @@ def help_kb(page=0):
         )
 
     rows.append(nav)
+
     return InlineKeyboardMarkup(rows)
 
 
