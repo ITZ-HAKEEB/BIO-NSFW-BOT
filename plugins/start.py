@@ -1,3 +1,4 @@
+
 import html
 
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
@@ -13,100 +14,229 @@ from plugins import logs
 HTML = ParseMode.HTML
 PER_PAGE = 6
 
-# (button label, module NAME) - alphabetical, 6 per page -> 3 pages
+# Help modules — alphabetical order, 6 per page
 HELP_MODULES = [
-    ("Abuse", "abuse"), ("Approve", "approve"), ("Bio-Mode", "biomode"),
-    ("Echo", "echo"), ("Edit", "edit"), ("F-Sub", "fsub"),
-    ("Fonts", "nostylish"), ("Forward", "noforward"), ("Link-Filter", "linkfilter"),
-    ("Media-Del", "mediadelete"), ("Msg-Del", "msgdelete"), ("No-Hash", "nohashtags"),
-    ("NSFW", "nsfw"), ("Phone", "nophone"), ("Promo", "nopromo"), ("Purge", "purge"),
+    ("Abuse", "abuse"),
+    ("Approve", "approve"),
+    ("Bio-Mode", "biomode"),
+    ("Echo", "echo"),
+    ("Edit", "edit"),
+    ("F-Sub", "fsub"),
+    ("Fonts", "nostylish"),
+    ("Forward", "noforward"),
+    ("Link-Filter", "linkfilter"),
+    ("Media-Del", "mediadelete"),
+    ("Msg-Del", "msgdelete"),
+    ("No-Hash", "nohashtags"),
+    ("NSFW", "nsfw"),
+    ("Phone", "nophone"),
+    ("Promo", "nopromo"),
+    ("Purge", "purge"),
 ]
+
 PAGES = (len(HELP_MODULES) + PER_PAGE - 1) // PER_PAGE
 
 
-def btn(label, **kw):
-    return InlineKeyboardButton(btn_style(label), **kw)
+def btn(label, **kwargs):
+    return InlineKeyboardButton(btn_style(label), **kwargs)
 
 
 def start_text(name):
-    greet = style(config.START_GREETING).format(name=style(html.escape(name)))
-    body = style(config.START_BODY).format(bot_name=style(html.escape(config.BOT_NAME)))
-    return f"<blockquote>{greet}</blockquote>\n<blockquote expandable>{body}</blockquote>"
+    safe_name = html.escape(name or "User")
+    safe_bot_name = html.escape(config.BOT_NAME)
+
+    greet = style(config.START_GREETING).format(
+        name=style(safe_name)
+    )
+    body = style(config.START_BODY).format(
+        bot_name=style(safe_bot_name)
+    )
+
+    return (
+        f"<blockquote>{greet}</blockquote>\n"
+        f"<blockquote expandable>{body}</blockquote>"
+    )
 
 
 def start_kb(bot_username):
     return InlineKeyboardMarkup([
-        [btn("ADD ME TO YOUR GROUP",
-             url=f"https://t.me/{bot_username}?startgroup=true&admin=delete_messages+restrict_members")],
-        [btn("OWNER", url=config.OWNER_URL), btn("UPDATES", url=config.UPDATE_CHANNEL_URL)],
-        [btn("SUPPORT", url=config.SUPPORT_URL), btn("SOURCE", url=config.SOURCE_URL)],
-        [btn("HELP COMMAND", callback_data="hp:0")],
+        [
+            btn(
+                "𝐀ᴅᴅ 𝐌ᴇ 𝐓ᴏ 𝐘ᴏᴜʀ 𝐆ʀᴏᴜᴘ",
+                url=(
+                    f"https://t.me/{bot_username}"
+                    "?startgroup=true&admin=delete_messages+restrict_members"
+                ),
+            )
+        ],
+        [
+            btn("𝐎ᴡɴᴇʀ", url=config.OWNER_URL),
+            btn("𝐔ᴘᴅᴀᴛᴇs", url=config.UPDATE_CHANNEL_URL),
+        ],
+        [
+            btn("𝐒ᴜᴘᴘᴏʀᴛ", url=config.SUPPORT_URL),
+            btn("𝐒ᴏᴜʀᴄᴇ", url=config.SOURCE_URL),
+        ],
+        [
+            btn("𝐇ᴇʟᴘ 𝐂ᴏᴍᴍᴀɴᴅ", callback_data="hp:0"),
+        ],
     ])
 
 
 def help_kb(page=0):
     page = max(0, min(page, PAGES - 1))
-    items = HELP_MODULES[page * PER_PAGE:(page + 1) * PER_PAGE]
-    btns = [btn(label, callback_data=f"h:{name}:{page}") for label, name in items]
-    rows = [btns[i:i + 2] for i in range(0, len(btns), 2)]
+
+    items = HELP_MODULES[
+        page * PER_PAGE:(page + 1) * PER_PAGE
+    ]
+
+    buttons = [
+        btn(label, callback_data=f"h:{name}:{page}")
+        for label, name in items
+    ]
+
+    rows = [
+        buttons[i:i + 2]
+        for i in range(0, len(buttons), 2)
+    ]
+
     nav = []
+
     if page > 0:
-        nav.append(btn("◀️ Back", callback_data=f"hp:{page - 1}"))
-    nav.append(btn("Home🏡", callback_data="start"))
+        nav.append(
+            btn("◀️ 𝐁ᴀᴄᴋ", callback_data=f"hp:{page - 1}")
+        )
+
+    nav.append(
+        btn("𝐇ᴏᴍᴇ 🏡", callback_data="start")
+    )
+
     if page < PAGES - 1:
-        nav.append(btn("Next ▶️", callback_data=f"hp:{page + 1}"))
+        nav.append(
+            btn("𝐍ᴇxᴛ ▶️", callback_data=f"hp:{page + 1}")
+        )
+
     rows.append(nav)
     return InlineKeyboardMarkup(rows)
 
 
-async def send_panel(message, text, kb):
-    """Send text with the bot photo on top (if one is set)."""
+async def send_panel(message, text, keyboard):
+    """Send a panel with the configured bot image, if available."""
     img = get_image()
+
     if img:
         try:
-            return await message.reply_photo(img, caption=text, parse_mode=HTML, reply_markup=kb)
-        except Exception as e:
-            log.warning("photo failed, sending text only: %s", e)
-    return await message.reply_text(text, parse_mode=HTML, reply_markup=kb)
+            return await message.reply_photo(
+                photo=img,
+                caption=text,
+                parse_mode=HTML,
+                reply_markup=keyboard,
+            )
+        except Exception as exc:
+            log.warning(
+                "Photo sending failed; sending text instead: %s",
+                exc,
+            )
+
+    return await message.reply_text(
+        text=text,
+        parse_mode=HTML,
+        reply_markup=keyboard,
+    )
 
 
-async def show(q, text, kb):
-    """Edit the panel in place (caption if it has a photo, text otherwise)."""
+async def show(query, text, keyboard):
+    """Edit the existing panel caption or text."""
     try:
-        if q.message.photo:
-            await q.edit_message_caption(caption=text, parse_mode=HTML, reply_markup=kb)
+        if query.message.photo:
+            await query.edit_message_caption(
+                caption=text,
+                parse_mode=HTML,
+                reply_markup=keyboard,
+            )
         else:
-            await q.edit_message_text(text, parse_mode=HTML, reply_markup=kb)
-    except Exception as e:
-        log.warning("edit failed: %s", e)
+            await query.edit_message_text(
+                text=text,
+                parse_mode=HTML,
+                reply_markup=keyboard,
+            )
+    except Exception as exc:
+        log.warning("Panel editing failed: %s", exc)
 
 
 async def start(update, context):
     if update.effective_chat.type != "private":
         return
-    if db.add_user(update.effective_user.id):   # remember user for /broadcast
-        await logs.new_user(context.bot, update.effective_user)   # first time -> log group
-    await send_panel(update.message, start_text(update.effective_user.first_name), start_kb(context.bot.username))
+
+    user = update.effective_user
+
+    if db.add_user(user.id):
+        await logs.new_user(context.bot, user)
+
+    await send_panel(
+        update.message,
+        start_text(user.first_name),
+        start_kb(context.bot.username),
+    )
 
 
 async def help_cmd(update, context):
-    await send_panel(update.message, style(config.HELP_TEXT), help_kb(0))
+    await send_panel(
+        update.message,
+        style(config.HELP_TEXT),
+        help_kb(0),
+    )
 
 
 async def buttons(update, context):
     import plugins
-    q = update.callback_query
-    await q.answer()
-    d = q.data
-    if d == "start":
-        await show(q, start_text(q.from_user.first_name), start_kb(context.bot.username))
-    elif d.startswith("hp:"):
-        await show(q, style(config.HELP_TEXT), help_kb(int(d[3:])))
-    elif d.startswith("h:"):
-        _, name, page = d.split(":")
-        mod = plugins.ALL.get(name)
-        if mod:
-            await show(q, style(mod.HELP), InlineKeyboardMarkup([[btn("◀️ Back", callback_data=f"hp:{page}")]]))
+
+    query = update.callback_query
+    await query.answer()
+
+    data = query.data
+
+    if data == "start":
+        await show(
+            query,
+            start_text(query.from_user.first_name),
+            start_kb(context.bot.username),
+        )
+
+    elif data.startswith("hp:"):
+        try:
+            page = int(data.split(":", 1)[1])
+        except (ValueError, IndexError):
+            page = 0
+
+        await show(
+            query,
+            style(config.HELP_TEXT),
+            help_kb(page),
+        )
+
+    elif data.startswith("h:"):
+        try:
+            _, name, page = data.split(":")
+            page = int(page)
+        except ValueError:
+            return
+
+        module = plugins.ALL.get(name)
+
+        if module and hasattr(module, "HELP"):
+            await show(
+                query,
+                style(module.HELP),
+                InlineKeyboardMarkup([
+                    [
+                        btn(
+                            "◀️ 𝐁ᴀᴄᴋ",
+                            callback_data=f"hp:{page}",
+                        )
+                    ]
+                ]),
+            )
 
 
 def register(app):
