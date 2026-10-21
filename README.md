@@ -1,4 +1,4 @@
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TEAM-KRITI/pro)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ITZ-HAKEEB/BIO-NSFW-BOT)
 
 # 🛡️ BioLinkRemover Bot
 
@@ -59,9 +59,5 @@ If you configured the systemd service:
 
 ## 💳 Credits & License
 
-Made with ❤️ by:
-- Archon: [@TheArchon](https://github.com/TheArchon)
-- Telegram: [@ArchonNetwork](https://t.me/ArchonNetwork)
-- Ayush: [@mightyayush](https://github.com/mightyayush)
 
-*This code was published by @TeamArchon*
+*This code was published by @VAMPIREKING*
