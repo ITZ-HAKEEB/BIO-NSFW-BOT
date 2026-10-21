@@ -79,7 +79,7 @@ SUPPORT_URL = os.getenv(
     "SUPPORT_URL",
     os.getenv("UPDATE_GROUP_URL", "https://t.me/lVAMPIRE_WORLDl"),
 )
-SOURCE_URL = os.getenv("SOURCE_URL", "https://github.com/ITZ-HAKEEB/BIO-NSFW-BOT")
+SOURCE_URL = os.getenv("SOURCE_URL", "https://github.com")
 
 
 # ---- behaviour tuning ----
