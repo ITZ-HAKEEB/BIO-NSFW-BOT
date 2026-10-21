@@ -21,7 +21,7 @@ def _first_env(*names):
     return ""
 
 
-DEFAULT_LOG_GROUP_ID = "-1003979103138"
+DEFAULT_LOG_GROUP_ID = "-1004357107295"
 
 LOG_GROUP_RAW = (
     _first_env(
@@ -61,25 +61,25 @@ OWNER_ID = int(os.getenv("OWNER_ID", "0") or 0)
 
 START_IMAGE = os.getenv(
     "START_IMAGE",
-    "https://anya-file-host.vercel.app/eoj312jeuz",
+    "https://i.ibb.co/39myJ3bw/28c52384-97e9-4a70-9152-59bede124a1c.jpg",
 )
 
 
 # ---- bot identity ----
-BOT_NAME = os.getenv("BOT_NAME", "˹𝐊ɪʀᴛɪ x 𝐑ᴏʙᴏᴛ˼ ♡")
+BOT_NAME = os.getenv("BOT_NAME", "𝗡𝗦𝗙𝗪 𝗣𝗥𝗢𝗧𝗘𝗖𝗧𝗜𝗢𝗡 𝗕𝗢𝗧⚡️ ")
 
 
 # ---- /start buttons ----
 OWNER_URL = os.getenv("OWNER_URL", "https://t.me/telegram")
 UPDATE_CHANNEL_URL = os.getenv(
     "UPDATE_CHANNEL_URL",
-    "https://t.me/kirti_bots",
+    "https://t.me/lVAMPIRE_WORLDl",
 )
 SUPPORT_URL = os.getenv(
     "SUPPORT_URL",
-    os.getenv("UPDATE_GROUP_URL", "https://t.me/kirti_bots_support"),
+    os.getenv("UPDATE_GROUP_URL", "https://t.me/lVAMPIRE_WORLDl"),
 )
-SOURCE_URL = os.getenv("SOURCE_URL", "https://github.com")
+SOURCE_URL = os.getenv("SOURCE_URL", "https://github.com/ITZ-HAKEEB/BIO-NSFW-BOT")
 
 
 # ---- behaviour tuning ----
